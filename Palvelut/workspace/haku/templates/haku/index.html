@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title></title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+       body {
+   background-color: #cccccc;
+   
+}
+#nappi
+{ 
+    width:105px;
+}
+#hist
+{ 
+    color: #00cc00;
+}
+a {
+    text-decoration : none;
+    
+}
+#bd{
+    background-color: #AABAAB;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    margin-top: -0px;
+    margin-left: -0px;
+    width: 120px;
+    height: 250px;
+    border-style: solid;
+    padding: 50px;
+}
+input[type=range] {
+  height: 3px;
+  margin: 2px 0;
+}
+input{width: 100px}
+input[type=submit] {
+  width:105px;
+}
+</style>
+    <body>
+        <div id="bd" style="margin: 0px">
+        <h3 id="header">Services Search: </h3>
+        <form action="/haku/search" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" name="submit" value="Search"/>
+            
+        </form>
+        <br>
+            <div id="hist">
+                <button id="nappi"><a class="btn btn primary" href="/haku/historia">History</a></button>
+            </div>
+        </div>
+        <script>
+
+        </script>
+    </body>
+</html>
